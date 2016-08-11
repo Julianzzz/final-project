@@ -1,11 +1,3 @@
-// mobile menu
-$(document).ready(function(){
-    $(".burger-nav").click(function(){
-        $("header nav ul").toggleClass("open");
-      });    
-    });
-
-
 // jQuery for functions on hover
 $('.gif_me').hover(function() {
   $(this).addClass('rotating');
@@ -62,5 +54,10 @@ $('.x-icon').click(function() {
 //Remove video
   $(".remove").css('display', 'none');
 });
-
+// // mobile menu
+$(document).ready(function(){
+  $(".burger-nav").click(function(){
+    $("header nav ul").toggleClass("open");
+  });    
+});
 

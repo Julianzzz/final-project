@@ -3,68 +3,79 @@ html{
 
 
 body{
+  font-family: 'Poppins', sans-serif;
+  background: url("http://10steps.sg/wp-content/uploads//2012/11/White-christmas-light-background.jpg");
+  background-size: cover;
+  background-position: center;  
 }
 
-nav{
-}
+
 
 header {
 	background-color: yellow;
 
 }
 
-/*Main nav*/
-
-header h1{
-	padding-left: 20px;
+header nav{
+  position: relative;
+  width: 100%;
 }
 
-.top-nav{
-	display: inline-block;
-	float: right;
+header nav h1{
+  padding-left: 20px;
 }
 
-.main-nav{
-	margin: 0px;
-}
-
-.main-nav li{
-	display: inline-block;
-	font-size:20px;
+header nav h1 a {
+  text-decoration: none;
+  font-weight: 700;
 
 }
 
-a:link {
-	text-decoration: none;
+header nav ul {
+  list-style: none;
+  padding-left: 0;
+  text-decoration: none;
+  display: inline-block;
+  float: right;
+  margin-top: 30px;
+  padding-right: 30px;
 }
 
-header nav ul li{
-	margin: 30px;
+header nav ul li {
+  display: inline-block;
+
 }
 
-#logo{
+header nav ul li a {
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0 10px;
 }
 
 
-/*Image sytle*/
+  /*Image sytle*/
 
-.gif_container{
-  display:inline-block;
-  text-align: -webkit-center;
-}
+  .gif_container{
+    display:inline-block;
+    text-align: -webkit-center;
+  }
 
-.gif_me{
+  .gif_me{
     height: 200px;
     width: 291px;
-    margin: 45px;
+    margin: 28px;
     border: 2px solid black;
-}
+  }
 
-header h1 {
-	display: inline-block;
-}
-.overlay {
-  position: absolute;
+  header h1 {
+   display: inline-block;
+ }
+ h2 {
+  text-shadow: 2px 2px #ff0000;
+ }
+ .overlay {
+  position: fixed;
   background-color: rgba(44, 62, 80, 0.9);
   height: 100%;
   width: 100%;
@@ -81,6 +92,12 @@ header h1 {
 }
 
 /*Video light Box*/
+.remove{
+  margin-top: -25rem;
+
+}
+
+
 #video_1 {
   margin-left: 30%;
   position: absolute;
@@ -126,80 +143,43 @@ header h1 {
 	padding: 50px;
 }
 #layout-2{
-	width: 40%;
-	float:left;
-	padding: 50px
+    width: 40%;
+    float: left;
+    padding-top: 135px;
+    padding-left: 30px;
 }
 .left-align{
 	text-align: left;
 }
 
-/*Media Queries*/
-@media only screen and (min-width: 768px) {
 
-}
-
-@media only screen and (max-width: 767px) {
-	#layout-1{
-		width: 80%;
-		float:left;
-		padding: 10px;
-	}
-	#layout-2{
-		width: 80%;
-		float:left;
-		padding: 10px
-	}
-.burger-nav{
-  display: block;
-  height: 40px;
-  width: 100%;
-  background: url(../image/menu-icon.png) no-repeat 98% center;
-  cursor: pointer;
-}
-
-header nav ul{
-  overflow: hidden;
-  background: 505050;
-  //hight: 0;
-}
-
-header nav ul.open{
-  height: auto;
-}
-header nav ul li{
-  float:none;
-  text-align: left;
-  width:100%;
-  margin: 0;
-}
-header nav ul li a{
-  color: black;
-  padding:10px;
-  border-bottom: 1px solid #404040;
-  display: block;
-  margin:0;
-}
-
-
-
-/*Header Tags*/
-
-h1{
-
-}
-h2{
-
-}
-h3{
-
-}
 footer{
 	clear: both;
 	background-color: #c6c6c6;
 	text-align: center;
 	padding: 15px 0;
 }
+ /*iframe responsive css*/
+.auto-resizable-iframe {
+  max-width: 560px;
+  margin: 0px auto;
+}
+
+.auto-resizable-iframe > div {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0px;
+}
+
+.auto-resizable-iframe iframe {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+
 
 /*css for image rotation*/
 @-webkit-keyframes rotating /* Safari and Chrome */ {
@@ -240,4 +220,54 @@ footer{
   -ms-animation: rotating 2s linear 1;
   -o-animation: rotating 2s linear 1;
   animation: rotating 2s linear 1;
+}
+
+
+
+/* These are all mobile and tablet media queries */
+
+@media only screen and (max-width: 768px) {
+  #layout-1{
+    width: 80%;
+    float:left;
+  }
+  #layout-2{
+    width: 80%;
+    float:left;
+    padding: 10px
+  }
+
+  .burger-nav {
+    display: inline-block;
+    height: 65px;
+    width: 100%;
+    background: url(../image/menu-icon.png) no-repeat 98% center;
+    cursor: pointer;
+    position: relative;
+    margin-top: -52px;
+
+  }
+
+  header nav ul{
+    overflow: hidden;
+    background: #505050;
+    float: none;
+    display: block;
+    margin:0;
+    height: 0; 
+  }
+  header nav ul.open{
+    height: auto;
+  }
+  header nav ul li {
+    float:none;
+    text-align: left;
+    width:100%;
+    margin: 0;
+  }
+  header nav ul li a {
+    color: #fff;
+    padding:10px;
+    border-bottom: 1px solid #404040;
+  }
 }
